@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useState, useEffect } from "react"
 import { AnimatePresence } from "motion/react"
 import Loader from "./components/Loader"
@@ -14,7 +15,7 @@ export default function BirthdayApp() {
   const [currentScreen, setCurrentScreen] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
 
-  const birthdayDate = new Date("2025-07-16T00:00:00")
+  const birthdayDate = new Date("2025-08-13T00:00:00")
   const [isBirthdayOver, setisBirthdayOver] = useState(new Date().getTime() >= birthdayDate.getTime())
 
   useEffect(() => {
@@ -55,18 +56,6 @@ export default function BirthdayApp() {
             <AnimatePresence mode="wait">{screens[currentScreen]}</AnimatePresence>
           </>)}
       </AnimatePresence>
-
-      {/* Watermark */}
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 1,
-        }}
-        className="fixed bottom-4 right-4 text-[13px] text-white/40 pointer-events-none z-50 font-light">
-        @anujbuilds
-      </motion.div>
-    </div>
+      </div>
   )
 }

@@ -74,7 +74,7 @@ export default function Countdown({ birthdayDate, onComplete }) {
                 >
                     Birthday Countdown
                 </motion.h1>
-                <p className="text-lg text-purple-300">The magical moment approaches...</p>
+                <p className="text-lg text-purple-300">The magical baby</p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl w-full">
@@ -123,7 +123,7 @@ export default function Countdown({ birthdayDate, onComplete }) {
                 transition={{ delay: 1.5 }}
             >
                 <Gift className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                <p className="text-purple-300 text-base">The surprise is just moments away💖</p>
+                <p className="text-purple-300 text-base">The surprise is just moments away 💖</p>
             </motion.div>
         </motion.div>
     )

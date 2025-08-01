@@ -1,13 +1,17 @@
 "use client"
 
-import { motion } from "motion/react"
-import { Gift, Sparkles, Heart } from "lucide-react"
+import { motion } from "framer-motion"
+import { Gift, Sparkles } from "lucide-react"
 import confetti from "canvas-confetti"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 export default function Celebration({ onNext }) {
     const colors = ["#ff69b4", "#ff1493", "#9370db"]
+
+    const audioRef = useRef(null)
+
     useEffect(() => {
+        // Confetti Animation
         const duration = 2500
         const end = Date.now() + duration
 
@@ -30,7 +34,21 @@ export default function Celebration({ onNext }) {
         }
 
         frame()
+
+        // Create audio
+        audioRef.current = new Audio("/hb.mp3")
+        audioRef.current.loop = true // optional: true if you want repeat
     }, [])
+
+    const handleCelebrateClick = () => {
+        // Play audio
+        if (audioRef.current) {
+            audioRef.current.play()
+        }
+
+        // Proceed with next step
+        onNext()
+    }
 
     return (
         <motion.div
@@ -40,7 +58,6 @@ export default function Celebration({ onNext }) {
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.8 }}
         >
-
             <motion.div
                 className="text-center mb-12"
                 initial={{ y: 50, opacity: 0 }}
@@ -49,15 +66,8 @@ export default function Celebration({ onNext }) {
             >
                 <motion.div
                     className="relative mb-8"
-                    animate={{
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
+                    animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
                     <div className="w-32 h-32 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto shadow-2xl relative overflow-hidden">
                         <motion.div
@@ -71,9 +81,7 @@ export default function Celebration({ onNext }) {
 
                 <motion.h1
                     className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6"
-                    style={{
-                        filter: "drop-shadow(0 0 30px rgba(255,105,180,0.5))",
-                    }}
+                    style={{ filter: "drop-shadow(0 0 30px rgba(255,105,180,0.5))" }}
                 >
                     Time to Celebrate!
                 </motion.h1>
@@ -91,15 +99,10 @@ export default function Celebration({ onNext }) {
             <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{
-                    delay: 1,
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 10,
-                }}
+                transition={{ delay: 1, type: "spring", stiffness: 200, damping: 10 }}
             >
                 <button
-                    onClick={onNext}
+                    onClick={handleCelebrateClick}
                     className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600 text-white text-lg px-8 py-4 rounded-full shadow-xl border-2 border-white/70 transition-all duration-300 hover:scale-[103%]"
                 >
                     <motion.div className="flex items-center space-x-2" whileTap={{ scale: 0.95 }}>
