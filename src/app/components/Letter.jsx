@@ -11,18 +11,21 @@ export default function Letter() {
     const [currentText, setCurrentText] = useState("")
     const [showCursor, setShowCursor] = useState(true)
 
-    const letterText = `My Dearest prarthana Ji, 💖
+    const letterText = `My Dear Akanksha 🐥💫,
 
-On this very special day, I want you to know how incredibly grateful I am to have you in my life. 🌟 Your birthday isn't just a celebration of another year 🎉 — it's a celebration of all the joy 😊, laughter 😄, and beautiful memories 🌈 you bring to this world.
+On your special day, I just want to say — having you in my life is something I genuinely appreciate more than I show 😊✨. You’re not just someone I talk to… you’re someone whose presence actually makes things feel lighter and better 🌸🌼.
 
-You have this amazing ability to light up any room you enter ✨, to make people smile even on their darkest days 🌧️➡️☀️, and to spread kindness wherever you go 🌻. Your heart is pure gold 💛, and your spirit is absolutely infectious 💫.
+There’s something about your vibe — the way you smile 😄, the way you talk 🫶, and the way you carry yourself — it’s calm, warm, and kind of addictive in the best way 💫🤍.
 
-Thank you for being the wonderful, amazing, absolutely fantastic person that you are 🙌. The world is so much brighter because you're in it 🌍🌟.
+I like how effortless things feel with you… no pressure, no drama — just real moments, real talks, and a connection that feels natural 🌙✨.
 
-Happy Birthday, beautiful soul! 🎂🎁🎈✨
+Thank you for being you — sweet, understanding, and a little different in your own beautiful way 🌻💛. You don’t even realize how special that makes you.
 
-With all my love and warmest wishes,
-Forever Yours 💕💌`
+Wishing you a day full of happiness 😄🎂, soft moments 🌸, unexpected smiles 🎁, and everything that makes your heart feel good 💖✨
+
+Happy Birthday, Akanksha 🐥🎈💫
+
+Stay this amazing… and maybe a little more mine in your own way 😉🫶`
 
     useEffect(() => {
         if (showText) {
@@ -79,7 +82,7 @@ Forever Yours 💕💌`
                     <h1 className="text-4xl md:text-6xl py-1 md:py-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 mb-4">
                         A Special Letter
                     </h1>
-                    <p className="text-lg text-purple-300">Just for you prarthana, on your special day 💌</p>
+                    <p className="text-lg text-purple-300">Just for you miss Akanksha ji, On your very special day 💌</p>
                 </motion.div>
 
                 <motion.div

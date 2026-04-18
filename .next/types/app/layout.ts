@@ -1,4 +1,4 @@
-// File: C:\Users\bhavi\Downloads\birthday-site-v2-main\birthday-site-v2\src\app\layout.js
+// File: C:\Users\bhavi\html or css\second-birthday-site-v2-main\birthday-site-v2\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

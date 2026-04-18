@@ -14,10 +14,7 @@ export default function PhotoGallery({ onNext }) {
         { id: 1, src: "/images/1.1.jpg" },
         { id: 2, src: "/images/1.2.jpg" },
         { id: 3, src: "/images/1.3.jpg" },
-        { id: 4, src: "/images/1.4.jpg" },
-        { id: 5, src: "/images/1.5.jpg" },
-        { id: 6, src: "/images/1.6.jpg" },
-        { id: 7, src: "/images/1.7.jpg" },
+        
     ]
 
     return (
@@ -46,9 +43,9 @@ export default function PhotoGallery({ onNext }) {
                 </motion.div>
 
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 mb-6">
-                Beautiful baby
+                miss Akanksha = cutie Akshu ji
                 </h1>
-                <p className="text-xl text-purple-300">Beautiful prarthana 📸</p>
+                <p className="text-xl text-purple-300">Beautiful miss Akanksha 📸</p>
             </motion.div>
 
             {/* Cube Gallery */}

@@ -1,6 +1,5 @@
 "use client"
 
-
 import { useState, useEffect } from "react"
 import { AnimatePresence } from "motion/react"
 import Loader from "./components/Loader"
@@ -15,7 +14,7 @@ export default function BirthdayApp() {
   const [currentScreen, setCurrentScreen] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
 
-  const birthdayDate = new Date("2025-08-13T00:00:00")
+  const birthdayDate = new Date("2026-05-05T23:55:00")
   const [isBirthdayOver, setisBirthdayOver] = useState(new Date().getTime() >= birthdayDate.getTime())
 
   useEffect(() => {
